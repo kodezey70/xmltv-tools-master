@@ -1,0 +1,74 @@
+{
+  "retry": {
+    "timeOut": 20,
+    "channelDelay": 5,
+    "showDelay": 1,
+    "indexDelay": 1,
+    "attempts": 2
+  },
+  "logging": true,
+  "skip": "12,1",
+  "timespan": {
+    "days": 2,
+    "pastdays":1,
+    "time": ""
+  },
+  "update": "",
+  "filename": "epg.xml",
+  "useragent": "Mozilla/5.0 (windows nt 6.1; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/54.0.2840.99 safari/537.36",
+  "mode": "m,nomark",
+  "proxy": {
+    "user":"",
+    "password":"",
+    "server":""
+    },
+  "postprocess": {
+    "type": "rex",
+    "grab": true,
+    "run": false
+  },
+  "channels": [
+    {
+      "name": "HBO",
+      "xmltv_id": "HBO",
+      "enabled": true,
+      "update": "i",
+      "siteinis": [
+        {
+          "site_id": "index_hbo",
+          "name": "hbo.bg"
+        }
+      ],
+      "timeshifts": [
+        {
+          "name": "HBO +1",
+          "xmltv_id": "HBO +1",
+          "enabled": true,
+          "offset": 1
+        },
+        {
+          "name": "HBO +2",
+          "xmltv_id": "HBO +2",
+          "enabled": true,
+          "offset": 2
+        }
+      ]
+    },    
+    {
+      "name": "Sport1 US HD",
+      "xmltv_id": "Sport1 US HD",
+      "enabled": true,
+      "update": "i",
+      "siteinis": [
+        {
+          "site_id": "162",
+          "name": "sky.de"
+        },
+        {
+          "name":"horizon.tv.de",
+          "site_id":"145416231118"
+        }
+      ]
+    }
+  ]
+}
